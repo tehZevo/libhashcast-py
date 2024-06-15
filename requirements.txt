@@ -1,0 +1,3 @@
+pynacl
+pyyaml
+git+https://github.com/tehzevo/protopost-python

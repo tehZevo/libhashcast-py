@@ -1,0 +1,13 @@
+services:
+  ws_server:
+    build: ../../nodes/websocket_server
+    ports:
+      - 8123:80
+    environment:
+      TX_PORT: 8000
+      RX_HOST: http://relay
+  
+  relay:
+    build: ../../nodes/relay
+    environment:
+      PEERS: "['http://ws_server:8000']"

@@ -1,0 +1,2 @@
+pynacl
+git+https://github.com/tehzevo/protopost-python
