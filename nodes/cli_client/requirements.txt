@@ -1,3 +1,0 @@
-pynacl
-git+https://github.com/tehzevo/protopost-python
-git+https://github.com/tehzevo/libhashcast-py
