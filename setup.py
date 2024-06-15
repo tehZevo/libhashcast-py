@@ -5,7 +5,7 @@ setup(name="libhashcast",
     install_requires = [
         "pynacl",
         "pyyaml",
-        "git+https://github.com/tehzevo/protopost-python",
+        "protopost @ git+https://github.com/tehzevo/protopost-python",
     ],
     packages=find_packages()
 )
