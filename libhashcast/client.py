@@ -20,8 +20,7 @@ class Outbox:
 
 #client's job is to validate and deduplicate messages
 class Client:
-  def __init__(self, signing_key, read_callback=lambda m: None):
-    self.signing_key = signing_key
+  def __init__(self, read_callback=lambda m: None):
     self.read_callback = read_callback
     self.stamps = []
 

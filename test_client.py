@@ -15,7 +15,7 @@ signing_key = generate_key()
 verify_key = signing_key.verify_key.encode()
 
 outbox = Outbox(send_callback=lambda m: print("sending", m))
-client = Client(signing_key, read_callback=lambda m: outbox.enqueue(m, hash_stamp(m.stamp)))
+client = Client(read_callback=lambda m: outbox.enqueue(m, hash_stamp(m.stamp)))
 
 # stamp, hash = create_stamp(verify_key)
 stamps = [create_stamp(verify_key) for _ in range(1000)]
